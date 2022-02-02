@@ -61,3 +61,11 @@ jobs:
       - name: Run rubocop
         run: |
           bundle exec rubocop
+
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['ruby']
